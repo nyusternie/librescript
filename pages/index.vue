@@ -3,238 +3,115 @@
 import { ref } from 'vue'
 
 /* Initialize tabs. */
-const tabStart = ref(true)
-const tabConfig = ref(false)
-const tabLabs = ref(false)
-const tabExtras = ref(false)
+// const tabStart = ref(true)
 
-/* Initialize blockchain handlers. */
-const blockHeight = ref(0)
-
-/**
- * Load Tab
- *
- * @param _tabid Specifies the "active" tab.
- */
-const loadTab = (_tabid: string) => {
-    /* Disable ALL tabs. */
-    tabStart.value = false
-    tabConfig.value = false
-    tabLabs.value = false
-    tabExtras.value = false
-
-    /* Enable selected tab. */
-    switch(_tabid) {
-    case 'start':
-        tabStart.value = true
-        break
-    case 'config':
-        tabConfig.value = true
-        break
-    case 'labs':
-        tabLabs.value = true
-        break
-    case 'extras':
-        tabExtras.value = true
-        break
-    }
-}
-
-/**
- * Get Block Height
- *
- * Will query a cluster of Rostrum servers for the current block height.
- */
-const getBlockHeight = () => {
-    /* Set block height. */
-    // FIXME FOR DEV PURPOSES ONLY
-    blockHeight.value = 1337
-}
-
-/* Request (current) block height. */
-getBlockHeight()
 </script>
 
 <template>
-    <main class="max-w-7xl mx-auto">
-        <header class="flex flex-col items-center">
-            <img src="~/assets/nexa.svg" class="w-24 h-24" />
-
-            <h1 class="text-5xl font-bold">
-                Welcome to LibreScript!
-            </h1>
-        </header>
-
-        <section class="mt-10 py-5 max-w-5xl mx-auto border border-purple-500 rounded-lg bg-gradient-to-r from-yellow-100 via-gray-50 to-yellow-100">
-            <div class="-mt-10 relative flex justify-center">
-                <span class="isolate inline-flex -space-x-px rounded-md shadow-sm">
-                    <button
-                        @click="loadTab('start')"
-                        type="button"
-                        class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    >
-                        <span class="sr-only">Get started</span>
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
-                        </svg>
-                    </button>
-
-                    <button
-                        @click="loadTab('config')"
-                        type="button"
-                        class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    >
-                        <span class="sr-only">Configuration</span>
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path
-                                fill-rule="evenodd"
-                                d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z"
-                                clip-rule="evenodd"
+    <main class="bg-white">
+        <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+            <div class="mx-auto max-w-7xl pb-12 pt-10 sm:pb-16 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20">
+                <div class="px-6 lg:px-0 lg:pt-4">
+                    <div class="mx-auto max-w-2xl">
+                        <div class="max-w-lg">
+                            <img
+                                class="h-11"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="LibreScript"
                             />
-                        </svg>
-                    </button>
 
-                    <button
-                        @click="loadTab('labs')"
-                        type="button"
-                        class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    >
-                        <span class="sr-only">Annotate</span>
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path
-                                fill-rule="evenodd"
-                                d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902 1.168.188 2.352.327 3.55.414.28.02.521.18.642.413l1.713 3.293a.75.75 0 001.33 0l1.713-3.293a.783.783 0 01.642-.413 41.102 41.102 0 003.55-.414c1.437-.231 2.43-1.49 2.43-2.902V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zM6.75 6a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 2.5a.75.75 0 000 1.5h3.5a.75.75 0 000-1.5h-3.5z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                    </button>
+                            <div class="mt-24 sm:mt-32 lg:mt-16">
+                                <a href="javascript://" class="inline-flex space-x-6">
+                                    <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">What's new</span>
+                                    <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
+                                        <span>Just shipped v0.1.0</span>
+                                        <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
 
-                    <button
-                        @click="loadTab('extras')"
-                        type="button"
-                        class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    >
-                        <span class="sr-only">Delete</span>
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path
-                                fill-rule="evenodd"
-                                d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                    </button>
-                </span>
-            </div>
+                            <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                                Embed Web &amp; Mobile Apps Into Blockchains
+                            </h1>
 
-<!-- BEGIN TABS -->
-            <section v-if="tabStart" class="">
-                <div class="mt-5 flex justify-center">
-                    <h2 class="text-2xl font-bold">
-                        Get started
-                    </h2>
-                </div>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">
+                                LibreScript is the first markup language <span class="text-amber-500 font-medium">(LSML)</span> that can be embedded directly into a blockchain.
+                                This offers an unparalleled new level of censorship resistance to Content Creators and Service Providers.
+                            </p>
 
-                <p class="px-10 py-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </section>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">
+                                Mix and match from a growing library of Elements to create your vision.
+                            </p>
 
-            <section v-if="tabConfig" class="">
-                <div class="mt-5 flex justify-center">
-                    <h2 class="text-2xl font-bold">
-                        Configuration
-                    </h2>
-                </div>
+                            <div class="mt-10 flex items-center gap-x-6">
+                                <NuxtLink
+                                    to="/playground"
+                                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                >
+                                    Open Playground
+                                </NuxtLink>
 
-                <p class="px-10 py-3">
-                    Start by modifying `nuxt.config.ts` to best suite your needs.
-                    Customize your app name, description and favorite icon.
-                    Favicon is located in `/public` folder.
-                </p>
-            </section>
-
-            <section v-if="tabLabs" class="">
-                <div class="mt-5 flex justify-center">
-                    <h2 class="text-2xl font-bold">
-                        Lab Experiments
-                    </h2>
-                </div>
-
-                <p class="px-10 py-3">
-                    Latest block is <NuxtLink :to="'https://explorer.nexa.org/block-height/' + blockHeight" target="_blank" class="text-xl text-blue-500 font-medium hover:underline">{{blockHeight}}</NuxtLink>
-                </p>
-
-                <p class="px-10 py-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </section>
-
-            <section v-if="tabExtras" class="">
-                <div class="mt-5 flex justify-center">
-                    <h2 class="text-2xl font-bold">
-                        Extra Resources
-                    </h2>
-                </div>
-
-                <p class="px-10 py-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </section>
-<!-- END TABS -->
-        </section>
-
-        <section class="mt-5 max-w-5xl mx-auto grid grid-cols-5 gap-5">
-            <div class="flex flex-col col-span-3 gap-5">
-                <NuxtLink to="https://nexajs.org" target="_blank" class="flex items-center gap-4 bg-gradient-to-r from-rose-500 to-rose-700 rounded-lg">
-                    <svg class="mx-5 w-32 h-32 text-rose-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"></path>
-                    </svg>
-
-                    <div>
-                        <h2 class="text-2xl text-rose-100 font-medium">
-                            Why Build on LibreScript?
-                        </h2>
-
-                        <p class="text-rose-100">
-                            LibreScript offers a premium Developer Experience (DX) that favors rapid iterations to get you deployed as quickly as possible.
-                        </p>
+                                <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
+                                    View the Open Source <span aria-hidden="true">→</span>
+                                </NuxtLink>
+                            </div>
+                        </div>
                     </div>
-                </NuxtLink>
-
-                <NuxtLink to="https://nexajs.org" target="_blank" class="flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-lg">
-                    <svg class="mx-5 w-32 h-32 text-yellow-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z"></path>
-                    </svg>
-
-                    <div>
-                        <h2 class="text-2xl text-yellow-100 font-medium">
-                            Check our more Examples
-                        </h2>
-
-                        <p class="text-yellow-100">
-                            The LibreScript community offers ample examples to help you get started quickly using the industry's best practices.
-                        </p>
-                    </div>
-                </NuxtLink>
-            </div>
-
-            <NuxtLink to="https://nexajs.org" target="_blank" class="col-span-2 py-3 flex flex-col items-center gap-2 bg-gradient-to-b from-sky-700 to-sky-500 rounded-lg">
-                <div class="p-3 flex flex-col">
-                    <h2 class="text-3xl text-sky-100 font-medium text-center">
-                        Documentation
-                    </h2>
-
-                    <p class="mt-3 text-sky-100">
-                        LibreScript offers excellent documentation that offers modern and up-to-date guides and tutorials for anything and everything you need.
-                    </p>
                 </div>
+                <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                    <div class="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
 
-                <svg class="mx-5 w-24 h-24 text-sky-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
-                </svg>
-            </NuxtLink>
-        </section>
+                    <div class="shadow-lg md:rounded-3xl">
+                        <div class="bg-indigo-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
+                            <div class="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36" aria-hidden="true"></div>
 
-        <Footer />
+                            <div class="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
+                                <div class="mx-auto max-w-2xl md:mx-0 md:max-w-none">
+                                    <div class="w-screen overflow-hidden rounded-tl-xl bg-gray-900">
+                                        <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                                            <div class="-mb-px flex text-sm font-medium leading-6 text-gray-400">
+                                                <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
+                                                    index.lsml
+                                                </div>
+
+                                                <div class="border-r border-gray-600/10 px-4 py-2">
+                                                    play.lsml
+                                                </div>
+
+                                                <div class="border-r border-gray-600/10 px-4 py-2">
+                                                    profile.lsml
+                                                </div>
+
+                                                <div class="border-r border-gray-600/10 px-4 py-2">
+                                                    help.lsml
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <pre class="px-6 pb-14 pt-6 text-white">
+# SAMPLE APPLICATION NOTES
+# - Content hashes are either 256-bit or 512-bit.
+# - Styling managed by a modified Tailwind CSS engine.
+
+["nexa:b4c9...267d"]["w-screen"]    # header
+["avax:3e36...ae80"]["h-1/2"]       # bannerAd1
+["bsc:3e36...ae80"]["h-1/2"]        # bannerAd2
+["nexa:0c67...06c9"]["center"]      # appIntro
+["sol:3e36...ae80"]["h-1/2 center"] # bannerAd3
+["nexa:9b96...baa4"]["w-screen"]    # footer
+</pre>
+                                    </div>
+                                </div>
+                                <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 md:rounded-3xl" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+        </div>
     </main>
+
+    <Footer />
 </template>
