@@ -37,8 +37,8 @@ import { ref } from 'vue'
                             </h1>
 
                             <p class="mt-6 text-lg leading-8 text-gray-600">
-                                <span class="font-medium">LibreScript Markup Language <span class="text-amber-500">(LSML)</span></span> applications can be efficiently compressed and embedded directly into most MAJOR blockchains;
-                                introducing an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers alike.
+                                <span class="font-medium">LibreScript Markup Language <span class="text-xl text-amber-500 tracking-wider">(LSML)</span></span> applications can be efficiently compressed and embedded directly into most <span class="font-medium">MAJOR</span> blockchains;
+                                introducing an unparalleled <span class="font-medium">NEW</span> level of censorship resistance for both <span class="font-medium">Content Creators</span> and <span class="font-medium">Service Providers</span> alike.
                             </p>
 
                             <!-- <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -97,12 +97,12 @@ import { ref } from 'vue'
 #   ↳ Each update costs &lt; $0.01 to ship to ALL users.
 
 nexa:b4c9...267d|w-screen           # header
-avax:3e36...ae80|h-1/2|id-123       # ads_mgr_1
-bsc:3e36...ae80|h-1/2|id-789        # ads_mgr_2
+avax:3e36...ae80|h-1/2|id_123       # ads_mgr_1
+bsc:3e36...ae80|h-1/2|id_789        # ads_mgr_2
 ipfs:QmbW...sMnR|center             # blog_intro_vid
 nexa:nqts...aae0|w-full             # blog_gallery
 nexa:nqts...drq2|w-1/2,center       # comments_win
-sol:3e36...ae80|w-1/2,center|id-456 # ads_mgr_3
+sol:3e36...ae80|w-1/2,center|id_456 # ads_mgr_3
 nexa:9b96...baa4|w-screen           # footer
 </pre>
                                     </div>
@@ -117,7 +117,7 @@ nexa:9b96...baa4|w-screen           # footer
                         <div class="">
                             The format for each line is simple:
                             <div class="block font-light text-xl text-rose-700 tracking-wider">
-                                network:content_hash<span class="px-1 text-amber-900 text-2xl">|</span>styling<span class="px-1 text-amber-900 text-2xl">|</span>parameters
+                                network_id:content_hash<span class="px-1 text-amber-900 text-2xl">|</span>styling<span class="px-1 text-amber-900 text-2xl">|</span>parameters
                             </div>
                         </div>
 
