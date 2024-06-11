@@ -31,13 +31,14 @@ import { ref } from 'vue'
                                 </a>
                             </div>
 
-                            <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                Powering Web &amp; Mobile Apps By Blockchains
+                            <h1 class="mt-10 text-4xl font-medium tracking-tight text-gray-900 sm:text-6xl tracking-wide">
+                                Powering Web &amp; Mobile Apps
+                                <span class="block font-light text-rose-500 italic tracking-wider">by Blockchains</span>
                             </h1>
 
                             <p class="mt-6 text-lg leading-8 text-gray-600">
                                 <span class="font-medium">LibreScript Markup Language <span class="text-amber-500">(LSML)</span></span> is compressed and then embedded directly into most MAJOR blockchains;
-                                offering an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers.
+                                offering an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers alike.
                             </p>
 
                             <!-- <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -72,35 +73,37 @@ import { ref } from 'vue'
                                         <div class="flex bg-gray-800/40 ring-1 ring-white/5">
                                             <div class="-mb-px flex text-sm font-medium leading-6 text-gray-400">
                                                 <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                                                    index.lsml
+                                                    blog_home.lsml
                                                 </div>
 
                                                 <div class="border-r border-gray-600/10 px-4 py-2">
-                                                    play.lsml
+                                                    blog_post.lsml
                                                 </div>
 
                                                 <div class="border-r border-gray-600/10 px-4 py-2">
-                                                    profile.lsml
+                                                    shop_home.lsml
                                                 </div>
 
                                                 <div class="border-r border-gray-600/10 px-4 py-2">
-                                                    help.lsml
+                                                    shop_item.lsml
                                                 </div>
                                             </div>
                                         </div>
 
                                         <pre class="px-6 pb-14 pt-6 text-white">
-# SAMPLE APPLICATION NOTES
-# - Content hashes are either 256-bit or 512-bit.
-# - Styling managed by a modified Tailwind CSS engine.
+# BLOG APPLICATION HIGHLIGHTS
+#   ↳ 4x blockchains + IPFS are dynamically sourced.
+#   ↳ On-chain (libre) script size is ONLY 1,812 bytes.
+#   ↳ Each update costs &lt; $0.01 to ship to ALL users.
 
-["nexa:b4c9...267d"]["w-screen"]     # header
-["avax:3e36...ae80"]["h-1/2"]        # ads_mgr_1
-["bsc:3e36...ae80"]["h-1/2"]         # ads_mgr_2
-["ipfs:QmbW...sMnR"]["center"]       # app_intro_vid
-["nexa:nqts...drq2"]["h-1/2 center"] # login_win
-["sol:3e36...ae80"]["h-1/2 center"]  # ads_mgr_3
-["nexa:9b96...baa4"]["w-screen"]     # footer
+nexa:b4c9...267d|w-screen           # header
+avax:3e36...ae80|h-1/2|abc123       # ads_mgr_1
+bsc:3e36...ae80|h-1/2|xyz789        # ads_mgr_2
+ipfs:QmbW...sMnR|center             # blog_intro_vid
+nexa:nqts...aae0|w-full             # blog_gallery
+nexa:nqts...drq2|w-1/2,center       # comments_win
+sol:3e36...ae80|w-1/2,center|lmn456 # ads_mgr_3
+nexa:9b96...baa4|w-screen           # footer
 </pre>
                                     </div>
                                 </div>
@@ -112,20 +115,46 @@ import { ref } from 'vue'
 
                     <section class="my-5 p-3 flex flex-col gap-4 text-sm text-amber-900 bg-amber-100 border-2 border-amber-300 rounded-xl shadow-md">
                         <div class="">
+                            The format for each line is simple:
+                            <div class="block font-light text-xl text-rose-700 tracking-wider">
+                                network:content_hash<span class="px-1 text-amber-900 text-2xl">|</span>styling<span class="px-1 text-amber-900 text-2xl">|</span>parameters
+                            </div>
+                        </div>
+
+                        <div class="">
                             Hashes will vary in size between 160-bit and 512-bit, depending on the blockchain network and application.
                         </div>
 
-                        <div>
+                        <div class="flex flex-col gap-4">
                             <h3 class="font-medium">
                                 Nexa's L1 blockchain natively supports OVER 300+ frameworks and libraries, including:
                             </h3>
 
-                            <ul class="pl-10 list-disc text-sm">
-                                <li>jQuery <span class="text-amber-700 italic">(nexa:nqts...gq0n)</span></li>
-                                <li>React <span class="text-amber-700 italic">(nexa:nqts...30d9)</span></li>
-                                <li>Vue.js <span class="text-amber-700 italic">(nexa:nqts...qmqd)</span></li>
-                                <li>plus many more...</li>
-                            </ul>
+                            <h3 class="font-medium">
+                                Styling managed by a modified Tailwind CSS engine.
+                            </h3>
+
+                            <div class="pl-10 grid grid-cols-4 gap-4 text-sm">
+                                <h3>Bootstrap</h3>
+                                <h3>12.5K</h3>
+                                <span class="col-span-2 text-amber-700 italic">nexa:nqts...d6jc</span>
+
+                                <h3>jQuery</h3>
+                                <h3>15.5K</h3>
+                                <span class="col-span-2 text-amber-700 italic">nexa:nqts...gq0n</span>
+
+                                <h3>React</h3>
+                                <h3>25.5K</h3>
+                                <span class="col-span-2 text-amber-700 italic">nexa:nqts...30d9</span>
+
+                                <h3>Vue.js</h3>
+                                <h3>21.5K</h3>
+                                <span class="col-span-2 text-amber-700 italic">nexa:nqts...qmqd</span>
+
+                                <div class="col-span-4 italic">
+                                    plus many more are being added each day...
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
