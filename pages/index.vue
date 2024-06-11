@@ -15,8 +15,8 @@ import { ref } from 'vue'
                     <div class="mx-auto max-w-2xl">
                         <div class="max-w-lg">
                             <img
-                                class="h-11"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="LibreScript"
+                                class="h-14 w-auto sm:h-16"
+                                src="~/assets/icon.png" alt="LibreScript"
                             />
 
                             <div class="mt-24 sm:mt-32 lg:mt-16">
@@ -32,17 +32,17 @@ import { ref } from 'vue'
                             </div>
 
                             <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                Embed Web &amp; Mobile Apps Into Blockchains
+                                Powering Web &amp; Mobile Apps By Blockchains
                             </h1>
 
                             <p class="mt-6 text-lg leading-8 text-gray-600">
-                                LibreScript is the first markup language <span class="text-amber-500 font-medium">(LSML)</span> that can be embedded directly into a blockchain.
-                                This offers an unparalleled new level of censorship resistance to Content Creators and Service Providers.
+                                <span class="font-medium">LibreScript Markup Language <span class="text-amber-500">(LSML)</span></span> is compressed and then embedded directly into most MAJOR blockchains;
+                                offering an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers.
                             </p>
 
-                            <p class="mt-6 text-lg leading-8 text-gray-600">
+                            <!-- <p class="mt-6 text-lg leading-8 text-gray-600">
                                 Mix and match from a growing library of Elements to create your vision.
-                            </p>
+                            </p> -->
 
                             <div class="mt-10 flex items-center gap-x-6">
                                 <NuxtLink
@@ -94,21 +94,43 @@ import { ref } from 'vue'
 # - Content hashes are either 256-bit or 512-bit.
 # - Styling managed by a modified Tailwind CSS engine.
 
-["nexa:b4c9...267d"]["w-screen"]    # header
-["avax:3e36...ae80"]["h-1/2"]       # bannerAd1
-["bsc:3e36...ae80"]["h-1/2"]        # bannerAd2
-["nexa:0c67...06c9"]["center"]      # appIntro
-["sol:3e36...ae80"]["h-1/2 center"] # bannerAd3
-["nexa:9b96...baa4"]["w-screen"]    # footer
+["nexa:b4c9...267d"]["w-screen"]     # header
+["avax:3e36...ae80"]["h-1/2"]        # ads_mgr_1
+["bsc:3e36...ae80"]["h-1/2"]         # ads_mgr_2
+["ipfs:QmbW...sMnR"]["center"]       # app_intro_vid
+["nexa:nqts...drq2"]["h-1/2 center"] # login_win
+["sol:3e36...ae80"]["h-1/2 center"]  # ads_mgr_3
+["nexa:9b96...baa4"]["w-screen"]     # footer
 </pre>
                                     </div>
                                 </div>
+
                                 <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 md:rounded-3xl" aria-hidden="true"></div>
                             </div>
                         </div>
                     </div>
+
+                    <section class="my-5 p-3 flex flex-col gap-4 text-sm text-amber-900 bg-amber-100 border-2 border-amber-300 rounded-xl shadow-md">
+                        <div class="">
+                            Hashes will vary in size between 160-bit and 512-bit, depending on the blockchain network and application.
+                        </div>
+
+                        <div>
+                            <h3 class="font-medium">
+                                Nexa's L1 blockchain natively supports OVER 300+ frameworks and libraries, including:
+                            </h3>
+
+                            <ul class="pl-10 list-disc text-sm">
+                                <li>jQuery <span class="text-amber-700 italic">(nexa:nqts...gq0n)</span></li>
+                                <li>React <span class="text-amber-700 italic">(nexa:nqts...30d9)</span></li>
+                                <li>Vue.js <span class="text-amber-700 italic">(nexa:nqts...qmqd)</span></li>
+                                <li>plus many more...</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
             </div>
+
             <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
         </div>
     </main>
