@@ -32,13 +32,13 @@ import { ref } from 'vue'
                             </div>
 
                             <h1 class="mt-10 text-4xl font-medium tracking-tight text-gray-900 sm:text-6xl tracking-wide">
-                                Powering Web &amp; Mobile Apps
-                                <span class="block font-light text-rose-500 italic tracking-wider">by Blockchains</span>
+                                Powering Web &amp; Mobile dApps
+                                <span class="block font-light text-rose-500 italic tracking-wider">by Blockchain</span>
                             </h1>
 
                             <p class="mt-6 text-lg leading-8 text-gray-600">
-                                <span class="font-medium">LibreScript Markup Language <span class="text-amber-500">(LSML)</span></span> is compressed and then embedded directly into most MAJOR blockchains;
-                                offering an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers alike.
+                                <span class="font-medium">LibreScript Markup Language <span class="text-amber-500">(LSML)</span></span> applications can be efficiently compressed and embedded directly into most MAJOR blockchains;
+                                introducing an unparalleled NEW level of censorship resistance for both Content Creators and Service Providers alike.
                             </p>
 
                             <!-- <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -50,7 +50,7 @@ import { ref } from 'vue'
                                     to="/playground"
                                     class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
-                                    Open Playground
+                                    Launch the Playground
                                 </NuxtLink>
 
                                 <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
@@ -97,12 +97,12 @@ import { ref } from 'vue'
 #   ↳ Each update costs &lt; $0.01 to ship to ALL users.
 
 nexa:b4c9...267d|w-screen           # header
-avax:3e36...ae80|h-1/2|abc123       # ads_mgr_1
-bsc:3e36...ae80|h-1/2|xyz789        # ads_mgr_2
+avax:3e36...ae80|h-1/2|id-123       # ads_mgr_1
+bsc:3e36...ae80|h-1/2|id-789        # ads_mgr_2
 ipfs:QmbW...sMnR|center             # blog_intro_vid
 nexa:nqts...aae0|w-full             # blog_gallery
 nexa:nqts...drq2|w-1/2,center       # comments_win
-sol:3e36...ae80|w-1/2,center|lmn456 # ads_mgr_3
+sol:3e36...ae80|w-1/2,center|id-456 # ads_mgr_3
 nexa:9b96...baa4|w-screen           # footer
 </pre>
                                     </div>
