@@ -17,8 +17,6 @@ export default defineNuxtConfig({
     },
 
     /* Application Modules */
-    modules: [
-        /* Tailwind CSS */
-        '@nuxtjs/tailwindcss'
-    ],
+    modules: [/* Tailwind CSS */
+    '@nuxtjs/tailwindcss', "@nuxtjs/plausible"],
 })
