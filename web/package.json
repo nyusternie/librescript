@@ -2,6 +2,9 @@
   "name": "librescript",
   "version": "24.6.11",
   "license": "MIT",
+  "description": "A succinct language for embedding web & mobile application data within a blockchain.",
+  "author": "Shomari <nyusternie@protonmail.com>",
+  "repository": "https://gogs.hos.im/nyusternie/librescript.git",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
