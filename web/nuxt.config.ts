@@ -17,6 +17,16 @@ export default defineNuxtConfig({
     },
 
     /* Application Modules */
-    modules: [/* Tailwind CSS */
-    '@nuxtjs/tailwindcss', "@nuxtjs/plausible"],
+    modules: [
+        /* Tailwind CSS */
+        '@nuxtjs/tailwindcss',
+
+        /* Plausible */
+        '@nuxtjs/plausible',
+    ],
+
+    /* Plausible */
+    plausible: {
+        apiHost: 'https://plausible.hos.im',
+    },
 })

@@ -13,9 +13,10 @@
     "@nuxtjs/plausible": "1.0.0",
     "ethers": "6.0.8",
     "nexajs": "22.12.23",
-    "nuxt": "3.0.0"
+    "nuxt": "3.7.4"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "6.4.1"
+    "@nuxtjs/tailwindcss": "6.4.1",
+    "postcss-custom-properties": "13.3.10"
   }
 }
