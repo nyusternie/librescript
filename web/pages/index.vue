@@ -8,6 +8,8 @@ import { ref } from 'vue'
 </script>
 
 <template>
+    <Header />
+
     <main class="bg-white">
         <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
             <div class="mx-auto max-w-7xl pb-12 pt-10 sm:pb-16 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20">
@@ -50,11 +52,13 @@ import { ref } from 'vue'
                                     to="/playground"
                                     class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
-                                    Launch the Playground
+                                    <span class="hidden lg:flex">Launch the Playground</span>
+                                    <span class="flex lg:hidden text-2xl">Playground</span>
                                 </NuxtLink>
 
                                 <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
-                                    View the Open Source <span aria-hidden="true">→</span>
+                                    <span class="hidden lg:flex">View the Open Source <span aria-hidden="true">→</span></span>
+                                    <span class="flex lg:hidden">View Source <span aria-hidden="true">→</span></span>
                                 </NuxtLink>
                             </div>
                         </div>

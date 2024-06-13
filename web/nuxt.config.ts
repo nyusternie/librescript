@@ -23,6 +23,12 @@ export default defineNuxtConfig({
 
         /* Plausible */
         '@nuxtjs/plausible',
+
+        /* Pinia */
+        '@pinia/nuxt',
+
+        /* Internationalization for Nuxt */
+        '@nuxtjs/i18n',
     ],
 
     /* Plausible */
