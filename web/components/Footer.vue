@@ -11,9 +11,17 @@
         </div>
 
         <section class="mt-5 px-3 flex justify-between">
-            <span class="text-sm text-gray-400">
-                &copy; 2024 LibreScript developers - MIT License
-            </span>
+            <div class="text-sm text-gray-400">
+                <span>
+                    &copy; 2024 LibreScript developers - MIT License
+                </span>
+
+                ♡
+
+                <NuxtLink to="/donate" class="hover:underline">
+                    donate
+                </NuxtLink>
+            </div>
 
             <div class="flex flex-row items-center gap-2">
                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
