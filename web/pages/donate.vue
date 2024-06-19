@@ -34,19 +34,77 @@ const System = useSystemStore()
         </p>
 
         <div class="grid grid-cols-2 gap-8">
-            <ol>
-                <li>Bitcoin (segwit)</li>
-                <li>Bitcoin (legacy)</li>
-                <li>Bitcoin (ln)</li>
-                <li>Bitcoin Cash</li>
-                <li>Nexa</li>
+            <ol class="flex flex-col gap-6">
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Bitcoin
+                        <span class="text-xs text-amber-600">segwit</span>
+                    </h3>
+                </li>
+
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Bitcoin
+                        <span class="text-xs text-amber-600">classic</span>
+                    </h3>
+                </li>
+
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Bitcoin
+                        <span class="text-xs text-amber-600">lightning</span>
+                    </h3>
+                </li>
+
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Bitcoin Cash
+                    </h3>
+
+                    <NuxtLink to="" target="_blank" class="text-xs text-gray-500 italic hover:underline">
+                        bitcoincash:XXX
+                    </NuxtLink>
+                </li>
+
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Nexa
+                    </h3>
+
+                    <NuxtLink to="https://explorer.nexa.org/address/nexa:nqtsq5g5wnltcdpm82g5t4rgxx3repxzpc5x6ceav5pqt9ty" target="_blank" class="text-xs text-gray-500 italic hover:underline">
+                        shomari.nexa
+                        <span class="block">nexa:nqtsq5g5wnltcdpm82g5t4rgxx3repxzpc5x6ceav5pqt9ty</span>
+                    </NuxtLink>
+                </li>
             </ol>
 
-            <ol>
-                <li>Avalanche</li>
+            <ol class="flex flex-col gap-6">
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Avalanche
+                    </h3>
+
+                    <NuxtLink to="https://subnets.avax.network/c-chain/address/0x27a9b30DBe015842098F4CD31f0301a1cEE74bfe" target="_blank" class="text-xs text-gray-500 italic hover:underline">
+                        shomari.avax
+                        <span class="block">0x27a9b30DBe015842098F4CD31f0301a1cEE74bfe</span>
+                    </NuxtLink>
+                </li>
+
                 <li>Dash</li>
-                <li>Ethereum</li>
+
+                <li>
+                    <h3 class="font-bold tracking-widest uppercase">
+                        Ethereum
+                    </h3>
+
+                    <NuxtLink to="https://etherscan.io/address/0x27a9b30DBe015842098F4CD31f0301a1cEE74bfe" target="_blank" class="text-xs text-gray-500 italic hover:underline">
+                        shomari.eth
+                        <span class="block">0x27a9b30DBe015842098F4CD31f0301a1cEE74bfe</span>
+                    </NuxtLink>
+                </li>
+
                 <li>Monero</li>
+
                 <li>Zcash</li>
             </ol>
         </div>
