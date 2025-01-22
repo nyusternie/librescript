@@ -54,7 +54,7 @@ const isShowingMobile = ref(false)
             </NuxtLink>
 
             <div class="hidden lg:flex flex-1 justify-end">
-                <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
+                <NuxtLink to="https://github.com/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
                     View Source <span aria-hidden="true">&rarr;</span>
                 </NuxtLink>
             </div>

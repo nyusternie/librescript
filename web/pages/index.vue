@@ -56,7 +56,7 @@ import { ref } from 'vue'
                                     <span class="flex lg:hidden text-2xl">Playground</span>
                                 </NuxtLink>
 
-                                <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
+                                <NuxtLink to="https://github.com/nyusternie/librescript" target="_blank" class="text-lg font-semibold leading-6 text-gray-900">
                                     <span class="hidden lg:flex">View the Open Source <span aria-hidden="true">→</span></span>
                                     <span class="flex lg:hidden">View Source <span aria-hidden="true">→</span></span>
                                 </NuxtLink>

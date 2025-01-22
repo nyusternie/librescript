@@ -55,7 +55,7 @@ const System = useSystemStore()
 
         <footer class="self-end lg:col-span-2 lg:col-start-1 lg:row-start-3">
             <div class="border-t border-gray-100 bg-sky-200 p-10">
-                <NuxtLink to="https://gogs.hos.im/nyusternie/librescript" target="_blank" class="flex items-center text-sm text-sky-500 hover:underline">
+                <NuxtLink to="https://github.com/nyusternie/librescript" target="_blank" class="flex items-center text-sm text-sky-500 hover:underline">
                     check out the open source
 
                     <svg class="pl-1 w-5 h-auto" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
